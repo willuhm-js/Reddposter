@@ -1,0 +1,22 @@
+{
+  "name": "Reddposter",
+  "version": "1.0.0",
+  "description": "Bot that grabs content from Reddit, repackages it, and reposts it on Instagram.",
+  "main": "src/index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/willuhm-js/Reddposter.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/willuhm-js/Reddposter/issues"
+  },
+  "homepage": "https://github.com/willuhm-js/Reddposter#readme",
+  "dependencies": {
+    "canvas": "^2.7.0",
+    "canvas-constructor": "^4.1.0",
+    "reddit-fetch": "^1.5.1"
+  }
+}
