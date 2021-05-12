@@ -9,4 +9,4 @@ node src/index.js
 ```
 
 #### Configuration
-See `src/config.js` for Instagram credentials
+See `src/config.js` for Instagram credentials.
