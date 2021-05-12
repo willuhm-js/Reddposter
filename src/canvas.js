@@ -2,9 +2,7 @@
 
 const { Canvas, resolveImage } = require("canvas-constructor");
 const { registerFont } = require("canvas");
-const fs = require("fs"); // todo for testing, delete later
 const wt = require("wrap-text");
-
 const Filter = require('bad-words-relaxed');
 
 let filter = new Filter({ placeHolder: 'x'});
@@ -29,6 +27,6 @@ module.exports = (post) => {
     .printText(`u/${filter.clean(post.author)}`, 125, 70)
     .toBuffer()
 
-    fs.writeFileSync('file.png', canvas) // testing delete later
+    return canvas;
   });
 };
