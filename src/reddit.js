@@ -12,12 +12,13 @@ let fetchPost = async () => {
       allowVideo: false
 
   });
+  console.log(post);
   return post;
 }
 
 let execute = async (lastPost) => {
   let post = await fetchPost();
-  if (lastPost.id == post.id || post.title.length > 179) {
+  if (lastPost.title == post.title || post.title.length > 179 || post.title.length < 40) {
     execute(lastPost);
   } else {
     return post;

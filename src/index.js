@@ -5,11 +5,11 @@ const fetchPost = require("./reddit.js");
 const repackagePost = require("./canvas.js");
 const publishPost = require("./instagram.js");
 
-let previousPost = { /* id */ }
+let previousPost = { /* title */ }
 
-const fs = require("fs")
+const fs = require("fs");
 
 fetchPost(previousPost).then(async post => {
-  previousPost.id = post.id;
+  previousPost.text = post.text;
   let tweet = await repackagePost(post);
 });
