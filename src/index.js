@@ -1,4 +1,4 @@
-// This file will act primarily as a central point for managing our code.
+// This file will act as a central point for managing our code.
 
 // Load modules we will need
 const fetchPost = require("./reddit.js");
