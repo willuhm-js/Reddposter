@@ -7,8 +7,7 @@ const publishPost = require("./instagram.js");
 
 let previousPost = { /* id */ }
 
-
 fetchPost(previousPost).then(post => {
-  previousPost.id = post.id
-  repackagePost(post)
-})
+  previousPost.id = post.id;
+  repackagePost(post);
+});
