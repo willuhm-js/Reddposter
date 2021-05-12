@@ -7,7 +7,9 @@ const publishPost = require("./instagram.js");
 
 let previousPost = { /* id */ }
 
-fetchPost(previousPost).then(post => {
+const fs = require("fs")
+
+fetchPost(previousPost).then(async post => {
   previousPost.id = post.id;
-  repackagePost(post);
+  let tweet = await repackagePost(post);
 });

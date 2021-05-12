@@ -15,8 +15,8 @@ let grammarFix = (sentence) => {
 
 registerFont('./src/media/twitter.ttf', { family: 'Twitter' });
 
-module.exports = (post) => {
-  let background = resolveImage('./src/media/template.png').then(background => {
+module.exports = async (post) => {
+  let background = await resolveImage('./src/media/template.png')
     let canvas = new Canvas(720, 300)
     .printImage(background, 0, 0, 720, 300)
     .setColor("#000000")
@@ -25,8 +25,7 @@ module.exports = (post) => {
     .setColor("#6A7C8A")
     .setTextFont('20px Twitter')
     .printText(`u/${filter.clean(post.author)}`, 125, 70)
-    .toBuffer()
-
+    .toBuffer();
     return canvas;
-  });
+    //return canvas;
 };
