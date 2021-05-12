@@ -9,3 +9,6 @@ Bot that grabs content from Reddit (r/showerthoughts), repackages it from a twee
 
 ## License
 **Reddposter** is licensed under the [MIT License](https://github.com/willuhm-js/Reddposter/blob/master/LICENSE)
+
+## Gallery
+![Tweet Example](images/IMAGE_3309.jpg)
