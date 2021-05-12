@@ -17,14 +17,16 @@ registerFont('./src/media/twitter.ttf', { family: 'Twitter' });
 
 module.exports = async (post) => {
   let background = await resolveImage('./src/media/template.png');
-    let canvas = new Canvas(720, 300)
-    .printImage(background, 0, 0, 720, 300)
+    let canvas = new Canvas(720, 720)
+    .setColor("#FFFFFF")
+    .printRectangle(0, 0, 720, 720)
+    .printImage(background, 0, 200, 720, 300)
     .setColor("#000000")
     .setTextFont('25px Twitter')
-    .printText(wt(grammarFix(post.title), 50), 40, 125)
+    .printText(wt(grammarFix(post.title), 50), 40, 325)
     .setColor("#6A7C8A")
     .setTextFont('20px Twitter')
-    .printText(`u/${filter.clean(post.author)}`, 125, 70)
+    .printText(`u/${filter.clean(post.author)}`, 125, 270)
     .toBuffer("image/jpeg");
     return canvas;
 };
