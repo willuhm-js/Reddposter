@@ -12,7 +12,6 @@ let fetchPost = async () => {
       allowVideo: false
 
   });
-  console.log(post);
   return post;
 }
 
