@@ -14,8 +14,5 @@ setInterval(() => {
     previousPost.text = post.text;
     let tweet = await repackagePost(post);
     await publishPost(tweet);
-
-    let now = new Date();
-    console.log(`New post published at ${now.getHours}:${now.getMinutes}:${now.getMilliseconds}`)
   }).catch(e => console.error(e));
 }, interval);
