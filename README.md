@@ -2,11 +2,7 @@
 Bot that grabs content from Reddit (r/showerthoughts), repackages it from a tweet template, and reposts it on Instagram every interval.
 
 ## Installation / Configuration
-#### Installation
-```
-npm install
-node src/index.js
-```
-
-#### Configuration
-See `src/config.js` for Instagram credentials.
+- `git clone https://github.com/willuhm-js/Reddposter`
+- `cd Reddposter`
+- Edit the configuration in `src/config.js`
+- `node src/index.js`
