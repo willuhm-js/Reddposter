@@ -25,6 +25,6 @@ module.exports = async (post) => {
     .setColor("#6A7C8A")
     .setTextFont('20px Twitter')
     .printText(`u/${filter.clean(post.author)}`, 125, 70)
-    .toBuffer();
+    .toBuffer("image/jpeg");
     return canvas;
 };
