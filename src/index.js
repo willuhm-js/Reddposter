@@ -10,5 +10,5 @@ let previousPost = { /* title */ }
 fetchPost(previousPost).then(async post => {
   previousPost.text = post.text;
   let tweet = await repackagePost(post);
-  publishPost(tweet);
+  await publishPost(tweet);
 }).catch(e => console.error(e));

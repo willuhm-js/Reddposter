@@ -18,6 +18,7 @@
     "bad-words-relaxed": "^1.6.5",
     "canvas": "^2.7.0",
     "canvas-constructor": "^4.1.0",
+    "instagram-private-api": "^1.44.1",
     "reddit-fetch": "^1.5.1",
     "wrap-text": "^1.0.9"
   }
