@@ -17,7 +17,7 @@ let fetchPost = async () => {
 
 let execute = async (lastPost) => {
   let post = await fetchPost();
-  if (lastPost.title == post.title || post.title.length > 179 || post.title.length < 40) {
+  if (lastPost.title == post.title || post.title.length > 179) {
     execute(lastPost);
   } else {
     return post;
