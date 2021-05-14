@@ -5,7 +5,7 @@ Bot that grabs content from Reddit (r/showerthoughts), repackages it from a twee
 
 > "That's what I call cross-platform!"
 
-**Unknown**
+**@princessmortix**
 
 <br>
 
