@@ -2,6 +2,7 @@
 Bot that grabs content from Reddit (r/showerthoughts), repackages it from a tweet template, and reposts it on Instagram every interval.
 
 > "Talk about cross-platform!"
+
 Unknown
 
 ## Installation / Configuration
