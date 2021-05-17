@@ -4,15 +4,20 @@
 const fetchPost = require("./reddit.js");
 const repackagePost = require("./canvas.js");
 const publishPost = require("./instagram.js");
-const {interval} = require("./config.js");
+const { interval } = require("./config.js");
+const fs = require("fs");
 
 let previousPost = { /* title */ }
 
-console.log(`The bot has started with an interval of ${interval} milliseconds`);
+console.log(`The bot has started with an interval of ${interval} milliseconds.`);
 setInterval(() => {
-  fetchPost(previousPost).then(async post => {
-    previousPost.text = post.text;
-    let tweet = await repackagePost(post);
-    await publishPost(tweet);
-  }).catch(e => console.error(e));
-}, interval);
+  let previous = +fs.readFileSync(`${__dirname}/timeManager.txt`)
+  if (Date.now() > (previous + interval)) {
+    fs.writeFileSync(`${__dirname}/timeManager.txt`, Date.now())
+    fetchPost(previousPost).then(async post => {
+      previousPost.text = post.text;
+      let tweet = await repackagePost(post);
+      await publishPost(tweet);
+    }).catch(e => console.error(e));
+  }
+}, 1000);
