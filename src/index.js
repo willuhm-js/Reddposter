@@ -18,6 +18,7 @@ setInterval(() => {
       previousPost.text = post.text;
       let tweet = await repackagePost(post);
       await publishPost(tweet);
+      console.log(`New post made [${Date.now()}]`)
     }).catch(e => console.error(e));
   }
 }, 1000);
