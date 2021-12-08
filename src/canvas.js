@@ -9,7 +9,7 @@ let filter = new Filter({ placeHolder: 'x'});
 
 let grammarFix = (sentence) => {
   sentence = sentence[0].toUpperCase() + sentence.slice(1);
-  if (!sentence.endsWith("!") && !sentence.endsWith(".")) sentence += ".";
+  if (!sentence.endsWith("!") && !sentence.endsWith(".") && !sentence.endsWith("?")) sentence += ".";
   return sentence;
 }
 
